@@ -13,7 +13,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -74,7 +73,7 @@ fun ImageChange() {
             }
 
         val pickMultiple =
-            rememberLauncherForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uri ->
+            rememberLauncherForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(3)) { uri ->
                 if (uri != null) {
                     Log.d("PhotoPicker", "Selected URI: $uri")
                     selectedUriList = uri
