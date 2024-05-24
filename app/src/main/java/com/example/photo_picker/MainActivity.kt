@@ -42,7 +42,6 @@ import com.example.photo_picker.ui.theme.Photo_PickerTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             Photo_PickerTheme {
                 ImageChange()
@@ -50,7 +49,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Composable
 fun ImageChange() {
@@ -130,7 +128,7 @@ fun ImageChange() {
             Text(text = "복수 선택")
         }
 
-        Image(
+        Image( //필터 연습, 참고용 이미지
             modifier = Modifier
                 .size(200.dp)
                 .clip(CircleShape)
@@ -144,7 +142,6 @@ fun ImageChange() {
             contentDescription = null
         )
     }
-
 }
 
 @Preview(showBackground = true)
